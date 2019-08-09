@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 960px;
+    position: relative;
+    top: 10px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #5831AF;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 17px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  font-weight: bold;
+  color: white;
+}
+
+.topnav div {
+  float: right;
+  color: #f2f2f2;
+}
+
+.topnav div p {
+  font-size: 17px;
+  margin: 17px;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  position: relative;
+  float: right;
+}
+
+.home {
+  font-weight: bolder;
+}
+
+h1 {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #5831AF;
+  color: white;
+  text-align: center;
+}
+
+#dropdownMenu2 {
+  background-color: #5831AF;
+  width: 100%;
+}
+
+.grupoSecciones {
+  margin-top: 10px;
+  overflow: hidden;
+  display: flex;
+}
+
+.seccion {
+  position: relative;
+  width: 33%;
+  height: 600px;
+  background-color: #5831AF;
+  margin: 2px;
+}
+
+.seccion p {
+  text-align: justify;
+  margin: 10px;
+}
+
+.imagenSeccion {
+  display: block;
+  height: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tituloSeccion {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.parrafoSeccion {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.ingresarSeccion {
+  text-align: center;
+  text-decoration: none;
+  background-color: rgba(255,0,0,0.7);
+  color: white;
+}
+
+.formLogin h2 {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.login-boton {
+  text-align: center;
+}
+
+.btn-primary {
+  width: 20%;
+  background-color: #5831AF;
+}
+
+.login-boton a {
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+.accordion {
+  color: white;
+}
+
+.card {
+  background-color: #5831AF;
+}
+
+.card-header {
+  background-color: #5831AF;
+  border: 0;
+}
+
+.collapse {
+  justify-content: center;
+
+}
+
+.collapsed {
+  text-decoration: none;
+  width: 100%;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  text-align: left;
+
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 500px;
+}
+
+.divBoton {
+  position: absolute;
+  bottom: 0px;
+}
+
+.ingresarSeccion{
+    position: absolute;
+    bottom: 30px;
+    left: 30%;
+    display: block;
+    width: 40%;
+    padding: 5px;
+    text-decoration: none;
+    background-color: rgba(255,0,0,0.7);
+    color: white;
+    text-align: center;
+
+}
+.ingresarSeccion:hover{
+    background-color: rgba(255,0,0,1);
+    text-decoration: none;
+
+}
+
+footer{
+  margin-top: 17px;
+  padding-top: 17px;
+  background-color: grey;
+}
+
+.footer a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 17px 16px;
+  font-size: 17px;
+}
+
+.footer .followUs {
+  color: #f2f2f2;
+}
+
+.contenidoFooter {
+  overflow: hidden;
+}
+
+.divFooter div{
+  overflow: hidden;
+  float: left;
+}
+
+.divFooter p{
+  font-size: 17px;
+}
+
+.divFooter .fab {
+  font-size: 20px;
+}
+
+
+span {
+  color: red;
+}
+
+.avatar {
+  vertical-align: middle;
+  height: 30px;
+  border-radius: 50%;
+}
