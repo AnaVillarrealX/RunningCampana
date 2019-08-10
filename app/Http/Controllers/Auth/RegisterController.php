@@ -49,15 +49,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
-            'gender' => ['required', 'string',],
-            'age' => ['required', 'integer',],
-            'weight' => ['integer',],
-            'height' => ['integer',],
+            'gender' => ['required', 'string'],
+            'age' => ['required', 'integer'],
+            'weight' => ['integer'],
+            'height' => ['integer'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'avatar' => 'file',
         ]);
     }
 
@@ -69,17 +68,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $path = $data['avatar'];
 
+        // $path = $data['avatar'];
 
-        if (!is_null($path)) {
-            $filename = $path->store('public/avatars');
-            $dbFilename = explode('/',$filename);
-            $filename = 'storage/avatars/'.$dbFilename[2];
-        }
+        // if (!is_null($path)) {
+        //     $filename = $path->store('public/avatars');
+        //     $dbFilename = explode('/',$filename);
+        //     $filename = 'storage/avatars/'.$dbFilename[2];
+        // }
+
+        if(isset($data['avatar'])){
+           $rutaArchivo = $data['avatar']->store('public/avatars');
+           $nombreArchivo = basename($rutaArchivo);
+           //dd($rutaArchivo);
+       }
 
         return User::create([
-            'name' => $data['name'],
+            'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'gender' => $data['gender'],
             'age' => $data['age'],
@@ -87,8 +92,7 @@ class RegisterController extends Controller
             'height' => $data['height'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'avatar' => $filename,
-            'role' => $data['role'],
+            'avatar' => $nombreArchivo,
         ]);
     }
 }
