@@ -36,4 +36,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function Goals(){
+      return $this->belongsTo('App\Goal','goal_id');
+    }
+    public function Traininssessions(){
+      return $this->belongsTo('App\Training_Session','trainingsession_id');
+    }
+
+
 }

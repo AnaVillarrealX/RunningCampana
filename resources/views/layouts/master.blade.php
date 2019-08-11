@@ -1,4 +1,4 @@
-@include('partials.header')
+@include('partials.head')
 @include('partials.navbar')
 @include('partials.carousel')
 @include('partials.section')

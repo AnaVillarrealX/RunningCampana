@@ -1,6 +1,6 @@
 <header class="encabezado">
 
-  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-s">
       <div class="container">
           <a class="navbar-brand" href="{{ url('/') }}">
               {{ config('app.name', 'Laravel') }}
@@ -13,8 +13,8 @@
               <!-- Left Side Of Navbar -->
               <ul class="navbar-nav mr-auto">
                 <a class="active"  href="index.php">Home</a>
-                <a href="faq0.php">FAQ's</a>
-                <a href="#contact">Contact</a>
+                <a href="{{route('faqs')}}">FAQ's</a>
+                <a href="">Contact</a>
               </ul>
 
               <!-- Right Side Of Navbar -->
