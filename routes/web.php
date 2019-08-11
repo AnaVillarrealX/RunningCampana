@@ -24,3 +24,8 @@ Route::get('/contactUS', 'ContactUSController@contactUS');
 Route::post('/contactUS', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
 
 Route::get('/faqs', 'FaqsController@faqs')->name('faqs');
+
+Route::get('/listadoUsuarios','UserController@index')->name('listadoUsuarios');
+Route::get('/detalleUsuario/{id}','UserController@show')->name('detalleUsuario');
+
+Route::get('/listadoCarreras','GoalController@index')->name('listadoCarreras');

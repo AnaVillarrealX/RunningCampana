@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
 }
 
 .container {
@@ -190,7 +191,7 @@ h1 {
 
 }
 
-footer{
+footer {
   margin-top: 17px;
   padding-top: 17px;
   background-color: grey;
@@ -211,12 +212,12 @@ footer{
   overflow: hidden;
 }
 
-.divFooter div{
+.divFooter div {
   overflow: hidden;
   float: left;
 }
 
-.divFooter p{
+.divFooter p {
   font-size: 17px;
 }
 
@@ -233,4 +234,12 @@ span {
   vertical-align: middle;
   height: 30px;
   border-radius: 50%;
+}
+
+.table {
+  background-color: white;
+}
+
+.card {
+  background-color: white;
 }

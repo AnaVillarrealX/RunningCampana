@@ -37,11 +37,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function Goals(){
+    public function goals() {
       return $this->belongsTo('App\Goal','goal_id');
     }
-    public function Traininssessions(){
-      return $this->belongsTo('App\Training_Session','trainingsession_id');
+    public function training_sessions(){
+      return $this->belongsTo('App\Training_Session','training_session_id');
     }
 
 

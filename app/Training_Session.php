@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Training_Session extends Model
 {
-  public $table = "trainingsessions";
+  public $table = "training_sessions";
   public $primakyKey = "id";
   public $timestamps = false;
   public $guarded = [];

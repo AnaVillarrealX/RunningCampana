@@ -1,5 +1,4 @@
 @include('partials.head')
 @include('partials.navbar')
-@include('partials.carousel')
 @yield('contenido')
 @include('partials.footer')
