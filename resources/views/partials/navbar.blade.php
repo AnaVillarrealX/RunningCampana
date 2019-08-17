@@ -19,7 +19,7 @@
                       <a class="nav-link" href="{{route('faqs')}}">FAQ's</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="">Contact</a>
+                      <a class="nav-link" href="{{route('contactUS')}}">Contact</a>
                   </li>
                 </ul>
 

@@ -36,4 +36,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function redirectPath(){
+      if (Auth()->User()->ROLE_ADMIN ) {
+        return '/dashboard';
+      }
+
+      else return '/home';
+    }
 }

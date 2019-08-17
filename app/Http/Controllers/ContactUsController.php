@@ -23,7 +23,7 @@ public function contactUS()
 public function contactUSPost(Request $request)
 {
     $this->validate($request, [
-     'name' => 'required',
+     'contacto' => 'required',
      'email' => 'required|email',
      'message' => 'required'
      ]);

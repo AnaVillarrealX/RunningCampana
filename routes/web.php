@@ -20,10 +20,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/contactUS', 'ContactUSController@contactUS');
-Route::post('/contactUS', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
+Route::get('contactUS', 'ContactUSController@contactUS')->name('contactUS');
+Route::post('contactUS', 'ContactUSController@contactUSPost')->name('contactUS');
 
-Route::get('/faqs', 'FaqsController@faqs')->name('faqs');
+Route::get('/faqs','FaqsController@faqs')->name('faqs');
 
 Route::get('/listadoUsuarios','UserController@index')->name('listadoUsuarios');
 Route::get('/detalleUsuario/{id}','UserController@show')->name('detalleUsuario');
