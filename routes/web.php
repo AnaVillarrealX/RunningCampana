@@ -29,3 +29,5 @@ Route::get('/listadoUsuarios','UserController@index')->name('listadoUsuarios');
 Route::get('/detalleUsuario/{id}','UserController@show')->name('detalleUsuario');
 
 Route::get('/listadoCarreras','GoalController@index')->name('listadoCarreras');
+
+Route::get('/listadoEntrenamientos','TrainingSessionController@index')->name('listadoEntrenamientos');

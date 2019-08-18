@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Género') }}</label>
+                            <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Género (M o F)') }}</label>
 
                             <div class="col-md-6">
                                 <input id="gender" type="text" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}" required autocomplete="gender" autofocus>
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="age" class="col-md-4 col-form-label text-md-right">{{ __('Años') }}</label>
+                            <label for="age" class="col-md-4 col-form-label text-md-right">{{ __('Edad (en años)') }}</label>
 
                             <div class="col-md-6">
                                 <input id="age" type="text" class="form-control @error('age') is-invalid @enderror" name="age" value="{{ old('age') }}" required autocomplete="age" autofocus>
@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="weight" class="col-md-4 col-form-label text-md-right">{{ __('Peso') }}</label>
+                            <label for="weight" class="col-md-4 col-form-label text-md-right">{{ __('Peso (en kg)') }}</label>
 
                             <div class="col-md-6">
                                 <input id="weight" type="text" class="form-control @error('weight') is-invalid @enderror" name="weight" value="{{ old('weight') }}" required autocomplete="weight" autofocus>
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="height" class="col-md-4 col-form-label text-md-right">{{ __('Altura') }}</label>
+                            <label for="height" class="col-md-4 col-form-label text-md-right">{{ __('Altura (en cm)') }}</label>
 
                             <div class="col-md-6">
                                 <input id="height" type="text" class="form-control @error('height') is-invalid @enderror" name="height" value="{{ old('height') }}" required autocomplete="height" autofocus>
@@ -89,7 +89,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -117,7 +117,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmar Contraseña') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -125,12 +125,12 @@
                         </div>
                         <div class="form-group row">
                           <div class="col-md-6">
-                            <h6 style="text-align: center">Ingresa tu nuevo avatar!</h6>
-                            <input id="avatar" type="file" class="form-control" name="avatar" placeholder="Ingresa tu nuevo avatar!">
+                            <h6 style="text-align: center">Ingresa tu avatar</h6>
+                            <input id="avatar" type="file" class="form-control" name="avatar" placeholder="Ingresa tu avatar">
                             @if ($errors->has('avatar'))
                                 <strong>{{ $errors->first('avatar') }}</strong>
                             @endif
-                        <p id= "errorAvatar"></p>
+                        <p id="errorAvatar"></p>
                           </div>
                       </div>
                         <div class="form-group row mb-0">

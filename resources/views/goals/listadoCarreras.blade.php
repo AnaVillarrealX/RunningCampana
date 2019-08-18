@@ -11,7 +11,6 @@
                     <th scope="col">Id</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Fecha</th>
-                    <th scope="col">Ver</th>
                 </tr>
             </thead>
             <tbody>
