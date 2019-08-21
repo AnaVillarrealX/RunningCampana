@@ -1,3 +1,4 @@
+
 -- MySQL dump 10.13  Distrib 5.7.18, for Linux (x86_64)
 --
 -- Host: localhost    Database: laravel-database
@@ -39,7 +40,7 @@ CREATE TABLE `users` (
   `email` varchar(50) NOT NULL,
   `password` varchar(200) NOT NULL,
   `avatar` varchar(50) NOT NULL,
-  `role` int(1) DEFAULT 1,
+  `role` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -48,7 +49,7 @@ CREATE TABLE `users` (
 --
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,NULL,NULL,'Hernan','Bueno','M',37,69,170,'hernan@gmail.com','123456','fotohernan.jpg',9),(2,NULL,NULL,'Esteban','Angeletti','M',36,71,172,'esteban@gmail.com','123456','fotoesteban.jpg',1),(3,NULL,NULL,'Cintia','Beron','F',32,67,170,'cintia@gmail.com','123456','fotocintia.jpg',1),(4,NULL,NULL,'Joaquin','Combet','M',16,50,155,'joaquin@gmail.com','123456','fotojoaquin.jpg',1),(5,NULL,NULL,'Alejandra','Morello','F',34,57,160,'alejandra@gmail.com','123456','fotoalejandra.jpg',1),(6,NULL,NULL,'Giselle','Britez','F',21,53,170,'giselle@gmail.com','123456','fotogiselle.jpg',1),(7,NULL,NULL,'Piera','Pedemonte','F',30,55,161,'piera@gmail.com','123456','fotopiera.jpg',1);
+INSERT INTO `users` VALUES (1,NULL,NULL,'Hernan','Bueno','M',37,69,170,'hernan@gmail.com','123456','fotohernan.jpg','admin'),(2,NULL,NULL,'Esteban','Angeletti','M',36,71,172,'esteban@gmail.com','123456','fotoesteban.jpg','customer'),(3,NULL,NULL,'Cintia','Beron','F',32,67,170,'cintia@gmail.com','123456','fotocintia.jpg','customer'),(4,NULL,NULL,'Joaquin','Combet','M',16,50,155,'joaquin@gmail.com','123456','fotojoaquin.jpg','customer'),(5,NULL,NULL,'Alejandra','Morello','F',34,57,160,'alejandra@gmail.com','123456','fotoalejandra.jpg','customer'),(6,NULL,NULL,'Giselle','Britez','F',21,53,170,'giselle@gmail.com','123456','fotogiselle.jpg','customer'),(7,NULL,NULL,'Piera','Pedemonte','F',30,55,161,'piera@gmail.com','123456','fotopiera.jpg','customer');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
