@@ -35,10 +35,16 @@
                                 <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @endif
-                    @else
+                      @else
+                        @if (Auth::user()->role == 7)
+                          <li class="nav-item dropdown red">
+                                <a class="dropdown-item" href="admin/users/listadoUsuarios">usuarios</a>
+                                {{-- <a class="dropdown-item" href="{{route('goals.index')}}">carreras</a> --}}
+                          </li>
+                        @endif
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                                {{ "Hola, ".Auth::user()->first_name }} <span class="caret"></span>
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -52,7 +58,7 @@
                                     @csrf
                                 </form>
                                 <div class="">
-                                  				<section class="col-sm-2"><a href="" class="pull-sright"><img id="avatar" title="profile image" class="img-circle img-responsive" src="{{asset(Auth::User()->avatar)}}"></a></section>
+                                  				<section class="col-sm-2"><a href="" class="pull-sright"><img id="avatar" title="profile image" class="" src="{{asset('storage/avatars'  .Auth::user()->avatar)}}" alt=""></a></section>
                                 </div>
                             </div>
                         </li>

@@ -22,7 +22,7 @@
       <img class= "imagenSeccion" src="img/both-running.png" alt="">
       <h3 class= "tituloSeccion"> Usuarios </h3>
       <p> Conoce a los runners que integran esta magnífica comunidad y desafíalos a superarte. </p>
-      <a class="ingresarSeccion" href="{{ route('listadoUsuarios') }}"> Ingresar </a>
+      <a class="ingresarSeccion" href="#"> Ingresar </a>
     </article>
   </div>
   </main>

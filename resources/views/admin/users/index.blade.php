@@ -30,10 +30,10 @@
                             {{$usuario->last_name}}
                         </td>
                         <td scope="row">
-                            <a href="/detalleUsuario/{{$usuario->id}}"><i class="far fa-eye"></i></a>
+                            <a href="/show/{{$usuario->id}}"><i class="far fa-eye"></i></a>
                         </td>
                         <td scope="row">
-                            <a href="/editarUsuario/{{$usuario->id}}/update"><i class="far fa-edit"></i></a>
+                            <a href="/edit/{{$usuario->id}}/update"><i class="far fa-edit"></i></a>
                         </td>
                         <td scope="row">
                             <a href="/eliminarUsuario/{{$usuario->id}}"><i class="far fa-trash-alt"></i></a>

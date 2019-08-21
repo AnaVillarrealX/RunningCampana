@@ -10,7 +10,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    const ROLE_ADMIN = 'admin';
+    const ROLE_ADMIN = '7';
 
     const ROLE_CUSTOMER = 'customer';
 
