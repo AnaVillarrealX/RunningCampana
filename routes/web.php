@@ -26,13 +26,21 @@ Route::post('contactUS', 'ContactUSController@contactUSPost')->name('contactUS')
 Route::get('/faqs','FaqsController@faqs')->name('faqs');
 
 // Route::get('/listadoUsuarios','UserController@index')->name('listadoUsuarios');
-Route::get('/detalleUsuario/{id}','UserController@show')->name('detalleUsuario');
+//Route::get('/detalleUsuario/{id}','UserController@show')->name('detalleUsuario');
 
 Route::get('/listadoCarreras','GoalController@index')->name('listadoCarreras');
 //
-Route::group(['prefix' => 'admin', 'middleware' => ['auth','role']], function () {
+//Route::group(['prefix' => 'admin', 'middleware' => ['auth','role']], function () {
     // Route::resource('/goals', 'AdminGoalController');
-    Route::resource('admin/users/listadoUsuarios','AdminUserController');
-});
+    //Route::resource('admin/users/listadoUsuarios','AdminUserController');
+//});
 
 // Route::get('/admin/users/listadoUsuarios','AdminUserController@index')->name('listadoUsuarios');
+
+
+Route::resource('users', 'AdminControllerUser')->names([
+    'index' => 'listadoUsuarios',
+    'show' => 'ver',
+    'edit' => 'edit',
+    'delete' => 'delete'
+]);

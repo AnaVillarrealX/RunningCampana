@@ -7,13 +7,13 @@ use App\Goal;
 
 class UserController extends Controller {
     public function index() {
-        $usuarios = User::all();
-        return view('users.listadoUsuarios')->with('usuarios',$usuarios);
+//        $usuarios = User::all();
+//      return view('users.listadoUsuarios')->with('usuarios',$usuarios);
     }
 
     public function show($id) {
-        $detalle = User::find($id);
-        return view('users.detalleUsuario')->with('detalle',$detalle);
+  //      $detalle = User::find($id);
+  //        return view('users.detalleUsuario')->with('detalle',$detalle);
     }
 
     public function save(Request $request){

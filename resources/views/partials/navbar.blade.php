@@ -38,7 +38,7 @@
                       @else
                         @if (Auth::user()->role == 7)
                           <li class="nav-item dropdown red">
-                                <a class="dropdown-item" href="admin/users/listadoUsuarios">usuarios</a>
+                                <a class="dropdown-item" href="{{route('listadoUsuarios')}}">usuarios</a>
                                 {{-- <a class="dropdown-item" href="{{route('goals.index')}}">carreras</a> --}}
                           </li>
                         @endif

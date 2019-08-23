@@ -10,7 +10,7 @@
       <img class= "imagenSeccion" src="img/man-running.png" alt="">
       <h3 class= "tituloSeccion">Entrenamiento</h3>
       <p> Para cumplir tus retos tienes que trabajar duro. Chequea las rutinas que el profe te va asignando. </p>
-      <a class="ingresarSeccion" href="{{ route('listadoEntrenamientos') }}"> Ingresar </a>
+      <a class="ingresarSeccion" href="#"> Ingresar </a>
     </article>
     <article class="seccion">
       <img class= "imagenSeccion" src="img/woman-running.png" alt="">
