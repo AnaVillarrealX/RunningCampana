@@ -46,21 +46,19 @@
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ "Hola, ".Auth::user()->first_name }} <span class="caret"></span>
                             </a>
-
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
-
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
-                                <div class="">
-                                  				<section class="col-sm-2"><a href="" class="pull-sright"><img id="avatar" title="profile image" class="" src="{{asset('storage/avatars'  .Auth::user()->avatar)}}" alt=""></a></section>
-                                </div>
                             </div>
+                        </li>
+                        <li class="">
+                          <a href="" class="pull-sright"><img max_width ="40px"  style ="border-radius:50%;" src="{{asset('storage/avatars'.Auth::user()->avatar)}}"></a>
                         </li>
                     @endguest
                 </ul>

@@ -4,17 +4,17 @@
 <main>
     <h1 class="presentacion">Datos de Usuario</h2>
       <div class="d-flex card col-12">
-        Nombre: {{$detalle->first_name}}
+        Nombre: {{$user->first_name}}
         <br>
-        Apellido: {{$detalle->last_name}}
+        Apellido: {{$user->last_name}}
         <br>
-        Género: {{$detalle->gender}}
+        Género: {{$user->gender}}
         <br>
-        Edad: {{$detalle->age}}
+        Edad: {{$user->age}}
         <br>
-        E-mail: {{$detalle->email}}
+        E-mail: {{$user->email}}
         <br>
-        <a href="{{ route('listadoUsuarios') }}">Volver</a>
+        <a href="{{route('listadoUsuarios')}}">Volver</a>
       </div>
 </main>
 

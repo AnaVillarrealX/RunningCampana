@@ -48,7 +48,7 @@ class AdminControllerUser extends Controller
     public function show($id)
     {
       $user = User::find($id);
-      return view('users.show',compact('user'));
+      return view('admin.users.show',compact('user'));
     }
 
     /**
@@ -60,7 +60,7 @@ class AdminControllerUser extends Controller
     public function edit($id)
     {
       $user = User::find($id);
-      return view('users.edit',compact('user'));
+      return view('admin.users.edit',compact('user'));
     }
 
     /**
@@ -74,8 +74,8 @@ class AdminControllerUser extends Controller
     {
       $this->validate($request, [
         "first_name" => 'required',
-        "last_name" => 'required'
-        //"avatar" => "image|dimensions:min_width=580,max_width=610,min_height=390,max_height=410",
+        "last_name" => 'required',
+        "avatar" => 'image|dimensions:min_width=580,max_width=610,min_height=390,max_height=410'
       ]);
 
 
@@ -84,17 +84,16 @@ class AdminControllerUser extends Controller
       $user->first_name = $request->input("first_name");
       $user->last_name = $request->input("last_name");
 
-      // $path = $request->file('avatar');
+      $path = $request->file('avatar');
 
-      // Sintaxis de PHP sin @'s:
-      // @if (!is_null($path))
-      //     $path->storeAs('public/storage', 'avatar'.$request->user()->id);
-      //     $user->avatar = 'storage/avatars'.$request->user()->id;
-      // @endif
+       if (!is_null($path)){
+           $path->storeAs('public/storage', 'avatar'.$request->user()->id);
+           $user->avatar = 'storage/avatars'.$request->user()->id;
+      }
 
       $user->save();
 
-      return redirect()->route('users.show',['id' => $id]);
+      return redirect()->route('admin.users.show',['id' => $id]);
     }
 
 
@@ -109,6 +108,6 @@ class AdminControllerUser extends Controller
       $user = User::find($id);
       $user->delete();
 
-      return redirect()->route("users.listadoUsuarios");
+      return redirect()->route("admin.users.listadoUsuarios");
     }
 }

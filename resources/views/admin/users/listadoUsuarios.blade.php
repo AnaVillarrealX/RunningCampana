@@ -30,13 +30,13 @@
                             {{$usuario->last_name}}
                         </td>
                         <td scope="row">
-                            <a href="/show/{{$usuario->id}}"><i class="far fa-eye"></i></a>
+                            <a href="{{route('ver',['id' => $usuario->id])}}"><i class="far fa-eye"></i></a>
                         </td>
                         <td scope="row">
-                            <a href="/edit/{{$usuario->id}}/update"><i class="far fa-edit"></i></a>
+                            <a href="{{route('edit', ['id' => $usuario->id])}}"><i class="far fa-edit"></i></a>
                         </td>
                         <td scope="row">
-                            <a href="/eliminarUsuario/{{$usuario->id}}"><i class="far fa-trash-alt"></i></a>
+                            <a href="{{route('delete',['id' => $usuario->id])}}"><i class="far fa-trash-alt"></i></a>
                         </td>
                         </tr>
                     @endforeach

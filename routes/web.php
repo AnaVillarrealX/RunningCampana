@@ -42,5 +42,5 @@ Route::resource('users', 'AdminControllerUser')->names([
     'index' => 'listadoUsuarios',
     'show' => 'ver',
     'edit' => 'edit',
-    'delete' => 'delete'
+    'destroy' => 'delete'
 ]);

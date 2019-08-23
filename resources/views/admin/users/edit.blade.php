@@ -31,20 +31,20 @@
                 </section>
                 <section class="col-md-9 col-sm-6">
                     <article class="card-body p-2 pl-4">
-                        <h3 class="title mb-3"><input type="text" style="width: 100%;" name="name" id="name" value="{{$user->name}}"></h3>
+                        <h3 class="title mb-3"><input type="text" style="width: 100%;" name="name" id="name" value="{{$user->first_name}}"></h3>
                         <hr>
                         <dl class="item-property">
                             <dt>Email</dt>
                             <dd>{{$user->email}}</dd>
                         </dl>
                         <dl class="param param-feature">
-                            <dt>Género</dt>
+                            <dt>Peso</dt>
                             <dd>
-                                <select name="genre" id="genre">
-                                    <option value="{{$user->genre}}" selected>@if ($user->genre == null) Ninguno @else {{$user->genre}}   @endif</option>
-                                    @foreach ($genres as $genre)
-                                        @if ($genre != $user->genre)
-                                            <option value="{{$genre}}">{{$genre}}</option>
+                                <select name="weight" id="weight">
+                                    <option value="{{$user->weight}}" selected>@if ($user->weight == null) Ninguno @else {{$user->weight}}   @endif</option>
+                                    @foreach ($user as $weight)
+                                        @if ($weight != $user->weight)
+                                            <option value="{{$weight}}">{{$weight}}</option>
                                         @endif
                                     @endforeach
                                 </select>
@@ -60,7 +60,7 @@
                             <dd>{{$user->updated_at}}</dd>
                         </dl>
                         <div class='container-fluid p-0'>
-                            <a href="{{route('users.show',['id' => $user->id])}}" class="btn btn-info btn-md">Volver</a>
+                            <a href="{{route('ver',['id' => $user->id])}}" class="btn btn-info btn-md">Volver</a>
                             <input type="submit" class="btn btn-primary btn-md" value="Actualizar">
                         </div>
                     </article>
@@ -79,4 +79,4 @@
     @endif
     </section>
 </div>
-@endsection  
+@endsection

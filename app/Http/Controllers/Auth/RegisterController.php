@@ -70,14 +70,6 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        // $path = $data['avatar'];
-
-        // if (!is_null($path)) {
-        //     $filename = $path->store('public/avatars');
-        //     $dbFilename = explode('/',$filename);
-        //     $filename = 'storage/avatars/'.$dbFilename[2];
-        // }
-
         if(isset($data['avatar'])){
            $rutaArchivo = $data['avatar']->store('public/avatars');
            $nombreArchivo = basename($rutaArchivo);
