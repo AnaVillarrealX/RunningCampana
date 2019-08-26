@@ -3,3 +3,4 @@
 @include('partials.carousel')
 @yield('contenido')
 @include('partials.footer')
+@include('partials.script')

@@ -2,3 +2,4 @@
 @include('partials.navbar')
 @yield('contenido')
 @include('partials.footer')
+@include('partials.script')
