@@ -44,3 +44,60 @@ Route::resource('users', 'AdminControllerUser')->names([
     'edit' => 'edit',
     'destroy' => 'delete'
 ]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::resource('goals','AdminControllerGoal')->names([
+    'index' => 'listadoCarreras',
+    'show' => 'ver',
+    'create' => 'crear',
+    'edit' => 'edit',
+    'destroy' => 'delete'
+]);
