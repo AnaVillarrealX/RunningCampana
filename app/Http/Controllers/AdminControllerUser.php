@@ -15,7 +15,7 @@ class AdminControllerUser extends Controller
     public function index()
     {
       $usuarios = User::orderBy('last_name')->get();
-      return view('admin.users.listadoUsuarios', compact('usuarios'));
+      return view('admin.users.index', compact('usuarios'));
     }
 
     /**
@@ -108,6 +108,6 @@ class AdminControllerUser extends Controller
       $user = User::find($id);
       $user->delete();
 
-      return redirect()->route("admin.users.listadoUsuarios");
+      return redirect()->route("admin.users.index");
     }
 }

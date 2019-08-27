@@ -41,66 +41,9 @@ Route::get('/listadoFotosEntrenamientos','FotosController@entrenamientos')->name
 Route::get('/listadoFotosCarreras','FotosController@carreras')->name('listadoFotosCarreras');
 Route::get('/listadoFotosHistorias','FotosController@historias')->name('listadoFotosHistorias');
 
-Route::resource('users', 'AdminControllerUser')->names([
-    'index' => 'listadoUsuarios',
-    'show' => 'ver',
-    'edit' => 'edit',
-    'destroy' => 'delete'
-]);
+Route::group(['prefix' => 'admin', 'middleware' => ['auth','role']], function () {
 
+Route::resource('/users', 'AdminControllerUser');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Route::resource('goals','AdminControllerGoal')->names([
-    'index' => 'listadoCarreras',
-    'show' => 'ver',
-    'create' => 'crear',
-    'edit' => 'edit',
-    'destroy' => 'delete'
-]);
+Route::resource('/goals','AdminControllerGoal');
+});

@@ -14,7 +14,7 @@
         <br>
         E-mail: {{$user->email}}
         <br>
-        <a href="{{route('listadoUsuarios')}}">Volver</a>
+        <a href="{{route('users.index')}}">Volver</a>
       </div>
 </main>
 

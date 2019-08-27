@@ -2,25 +2,11 @@
 @section('contenido')
   <div id='product-container' class="container-fluid p-0">
       <section class="container pt-3 pb-3">
-          <form class='form-group' method="POST" action="{{route('products.update',['id' => $product->id])}}" enctype="multipart/form-data" >
+          <form class='form-group' method="POST" action="{{route('goals.update',['id' => $product->id])}}" enctype="multipart/form-data" >
               @method('PUT')
               @csrf
               <article class="row">
-                  <section class="col-md-3 col-sm-6">
-                      <article class="product-grid mb-4 mt-4">
-                          <section class="product-image">
-                              <img class="pic-1" src="{{asset($product->imageLoc)}}">
-                              <img class="pic-2" src="{{asset($product->imageLoc2)}}">
-                          </section>
-                      </article>
-                      <article class='container-fluid p-0 mb-4'>
-                          <label for="imageLoc">Imagen 1</label>
-                          <input type="file" value="imageLoc" class='form-control-file' name="imageLoc" id="imageLoc">
-                          <hr>
-                          <label for="imageLoc2">Imagen 2</label>
-                          <input type="file" value="imageLoc2" class='form-control-file' name="imageLoc2" id="imageLoc2">
-                      </article>
-                  </section>
+
                   <section class="col-md-9 col-sm-6">
                       <article class="card-body p-2 pl-4">
                           <h3 class="title mb-3"><input type="text" style="width: 100%;" name="name" id="name" value="{{$product->name}}"></h3>
@@ -95,5 +81,5 @@
           </div>
       @endif
       </section>
-  </div>   
+  </div>
 @endsection

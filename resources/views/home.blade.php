@@ -15,7 +15,7 @@
       <img class= "imagenSeccion" src="img/woman-running.png" alt="">
       <h3 class= "tituloSeccion"> Carreras </h3>
       <p> Echa un vistazo a todas las carreras preparadas para vos. ¿Cuál será tu próximo reto? </p>
-      <a class="ingresarSeccion" href="{{ route('listadoCarreras') }}"> Ingresar </a>
+      <a class="ingresarSeccion" href="#"> Ingresar </a>
     </article>
     <article class="seccion">
       <img class= "imagenSeccion" src="img/both-running.png" alt="">

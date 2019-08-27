@@ -38,8 +38,8 @@
                       @else
                         @if (Auth::user()->role == 7)
                           <li class="nav-item dropdown red">
-                                <a class="dropdown-item" href="{{route('listadoUsuarios')}}">Usuarios</a>
-                                <a class="dropdown-item" href="{{route('listadoCarreras')}}">Carreras</a>
+                                <a class="dropdown-item" href="{{route('users.index')}}">Usuarios</a>
+                                <a class="dropdown-item" href="{{route('goals.index')}}">Carreras</a>
                           </li>
                         @endif
                         <li class="nav-item dropdown">
@@ -58,7 +58,7 @@
                             </div>
                         </li>
                         <li class="">
-                          <a href="" class="pull-sright"><img max_width ="40px"  style ="border-radius:50%;" src="{{asset('storage/avatars'.Auth::user()->avatar)}}"></a>
+                          <a href="" class="pull-sright"><img max_height="20px" style="border-radius:50%" src="{{asset('storage/avatars/'.Auth::user()->avatar)}}"></a>
                         </li>
                     @endguest
                 </ul>

@@ -2,7 +2,7 @@
 @section('contenido')
 
 <main>
-    <h1 class="presentacion">Listado usuarios</h1>
+    <h1 class="presentacion">Administración de <strong>Usuarios</strong></h1>
     <a href="{{ route('register') }}"> Agregar usuario </a>
     <div class="row">
       <div class="d-flex card col-12">
@@ -19,6 +19,7 @@
             </thead>
             <tbody>
                     @foreach ($usuarios as $usuario)
+
                     <tr>
                         <td>
                             {{$usuario->id}}
@@ -30,13 +31,13 @@
                             {{$usuario->last_name}}
                         </td>
                         <td scope="row">
-                            <a href="/show/{{$usuario->id}}"><i class="far fa-eye"></i></a>
+                            <a href="{{route('users.show',['id' => $usuario->id])}}"><i class="far fa-eye"></i></a>
                         </td>
                         <td scope="row">
-                            <a href="/edit/{{$usuario->id}}/update"><i class="far fa-edit"></i></a>
+                            <a href="{{route('users.edit', ['id' => $usuario->id])}}"><i class="far fa-edit"></i></a>
                         </td>
                         <td scope="row">
-                            <a href="/eliminarUsuario/{{$usuario->id}}"><i class="far fa-trash-alt"></i></a>
+                            <a href="{{route('users.destroy',['id' => $usuario->id])}}"><i class="far fa-trash-alt"></i></a>
                         </td>
                         </tr>
                     @endforeach

@@ -15,7 +15,7 @@ class AdminControllerGoal extends Controller
     public function index()
     {
       $goals = Goal::orderBy('goal_date')->get();
-      return view('admin.goals.listadoCarreras', compact('goals'));
+      return view('admin.goals.index')->with('goals',$goals);
     }
 
     /**
@@ -49,7 +49,7 @@ class AdminControllerGoal extends Controller
 
       $goal->save();
 
-      return redirect()->route('ver',['id' => $goal->id]);
+      return redirect()->route('goals.index',['id' => $goal->id]);
     }
     /**
      * Display the specified resource.
@@ -59,8 +59,9 @@ class AdminControllerGoal extends Controller
      */
     public function show($id)
     {
+
       $goal = Goal::find($id);
-      return view('admin.goals.show',compact('goals'));
+      return view('admin.goals.show')->with('goals',$goal);
     }
 
     /**
@@ -72,7 +73,7 @@ class AdminControllerGoal extends Controller
     public function edit($id)
     {
       $goal = Goal::find($id);
-      return view('admin.goals.edit',compact('goals'));
+      return view('admin.goals.edit',compact('goal'));
     }
 
     /**
@@ -97,7 +98,7 @@ class AdminControllerGoal extends Controller
 
       $goal->save();
 
-      return redirect()->route('ver',['id' => $goal->id]);
+      return redirect()->route('goals.show',['id' => $goal->id]);
     }
 
     /**
@@ -108,9 +109,10 @@ class AdminControllerGoal extends Controller
      */
     public function destroy($id)
     {
+
       $goal = Goal::find($id);
       $goal->delete();
 
-      return redirect()->route("goals.listadoCarreras");
+      return redirect()->route("goals.index");
     }
 }

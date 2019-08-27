@@ -60,7 +60,7 @@
                             <dd>{{$user->updated_at}}</dd>
                         </dl>
                         <div class='container-fluid p-0'>
-                            <a href="{{route('ver',['id' => $user->id])}}" class="btn btn-info btn-md">Volver</a>
+                            <a href="{{route('users.show',['id' => $user->id])}}" class="btn btn-info btn-md">Volver</a>
                             <input type="submit" class="btn btn-primary btn-md" value="Actualizar">
                         </div>
                     </article>
