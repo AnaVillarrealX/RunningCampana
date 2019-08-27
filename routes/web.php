@@ -37,6 +37,9 @@ Route::get('/listadoCarreras','GoalController@index')->name('listadoCarreras');
 
 // Route::get('/admin/users/listadoUsuarios','AdminUserController@index')->name('listadoUsuarios');
 
+Route::get('/listadoFotosEntrenamientos','FotosController@entrenamientos')->name('listadoFotosEntrenamientos');
+Route::get('/listadoFotosCarreras','FotosController@carreras')->name('listadoFotosCarreras');
+Route::get('/listadoFotosHistorias','FotosController@historias')->name('listadoFotosHistorias');
 
 Route::resource('users', 'AdminControllerUser')->names([
     'index' => 'listadoUsuarios',
