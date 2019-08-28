@@ -1,17 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
-@section('assets')
-    <link rel="stylesheet" href="{{asset('css/products.css')}}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <style>
-        .pagination a {color:black}
-        .product-grid{padding:0 0 0px !important;}
-        .edit, .edit:hover{color:blue}
-        .delete, .delete:hover{color:red}
-
-    </style>
-@endsection
-@section('content')
+@section('contenido')
 <div id='product-container' class="container-fluid p-0">
     <section class="container pt-3 pb-3">
         <form class='form-group' method="POST" action="{{route('users.update',['id' => $user->id])}}" enctype="multipart/form-data" >
@@ -31,20 +20,20 @@
                 </section>
                 <section class="col-md-9 col-sm-6">
                     <article class="card-body p-2 pl-4">
-                        <h3 class="title mb-3"><input type="text" style="width: 100%;" name="name" id="name" value="{{$user->first_name}}"></h3>
+                        <h3 class="title mb-3"><input type="text" style="width: 100%;" name="first_name" id="name" value="{{$user->first_name}}"></h3>
                         <hr>
                         <dl class="item-property">
                             <dt>Email</dt>
                             <dd>{{$user->email}}</dd>
                         </dl>
                         <dl class="param param-feature">
-                            <dt>Peso</dt>
+                            <dt>Género</dt>
                             <dd>
-                                <select name="weight" id="weight">
-                                    <option value="{{$user->weight}}" selected>@if ($user->weight == null) Ninguno @else {{$user->weight}}   @endif</option>
-                                    @foreach ($user as $weight)
-                                        @if ($weight != $user->weight)
-                                            <option value="{{$weight}}">{{$weight}}</option>
+                                <select name="genre" id="genre">
+                                    <option value="{{$user->genre}}" selected>@if ($user->genre == null) Ninguno @else {{$user->genre}}   @endif</option>
+                                    @foreach ($genres as $genre)
+                                        @if ($genre != $user->genre)
+                                            <option value="{{$genre}}">{{$genre}}</option>
                                         @endif
                                     @endforeach
                                 </select>

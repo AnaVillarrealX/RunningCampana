@@ -44,7 +44,7 @@
                         </td>
                         <td scope="row">
 
-                            <a href="{{route('goals.destroy',['id' => $goal->id])}}"><i class="far fa-trash-alt"></i></a>
+                            <a href="#"><i class="far fa-trash-alt"></i></a>
                         </td>
                         <td>{{$goal->updated_at}}</td>
                         </tr>

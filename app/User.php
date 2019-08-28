@@ -19,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name','last_name','gender','age','weight','height', 'email', 'password','avatar','role',
+        'first_name','last_name','genre','age','weight','height', 'email', 'password','avatar','role',
     ];
 
     /**
@@ -47,5 +47,12 @@ class User extends Authenticatable
       return $this->belongsTo('App\Training_Session','training_session_id');
     }
 
+    public function delete()
+    {
+      if ($this->id == self::ROLE_ADMIN) {
+        return false;
+      }
 
+      return parent::delete();
+    }
 }

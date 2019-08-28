@@ -43,7 +43,7 @@ Route::get('/listadoFotosHistorias','FotosController@historias')->name('listadoF
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth','role']], function () {
 
-Route::resource('/users', 'AdminControllerUser');
+Route::resource('/users','AdminControllerUser');
 
 Route::resource('/goals','AdminControllerGoal');
 });

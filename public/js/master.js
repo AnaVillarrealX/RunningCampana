@@ -11,7 +11,7 @@ window.onload=function() {
 
   var first_name = formulario.elements.first_name;
   var last_name = formulario.elements.last_name;
-  var gender = formulario.elements.gender;
+  var genre = formulario.elements.genre;
   var age = formulario.elements.age;
   var weight = formulario.elements.weight;
   var height = formulario.elements.height;
@@ -24,7 +24,7 @@ window.onload=function() {
     return true;
     if (!validateLastName(last_name.value)) return false;
     return true;
-    if (!validateGender(gender.value)) return false;
+    if (!validateGenre(genre.value)) return false;
     return true;
     if (!validateAge(age.value)) return false;
     return true;
@@ -65,7 +65,7 @@ window.onload=function() {
     if (last_name === "" || last_name.length <= 1) {
       return false
     } else {
-      formulario.elements.gender.focus()
+      formulario.elements.genre.focus()
       return true
     }
   }
@@ -80,9 +80,9 @@ window.onload=function() {
     }
   }
 
-  function validateGender(gender) {
-    var errorGender = document.getElementById("errorGender")
-    if (gender != 'M' && gender != 'F') {
+  function validateGenre(genre) {
+    var errorGenre = document.getElementById("errorGenre")
+    if (genre != 'M' && genre != 'F') {
       return false
     } else {
       formulario.elements.age.focus()
@@ -90,13 +90,13 @@ window.onload=function() {
     }
   }
 
-  gender.onfocusout = function () {
-    if (!validateGender(gender.value)) {
-      errorGender.innerHTML = "Debe colocar un género válido, M o F";
-      errorGender.setAttribute("class","alert-danger");
+  genre.onfocusout = function () {
+    if (!validateGenre(genre.value)) {
+      errorGenre.innerHTML = "Debe colocar un género válido, M o F";
+      errorGenre.setAttribute("class","alert-danger");
     } else {
-      errorGender.innerHTML = "";
-      errorGender.removeAttribute("class","alert-danger");
+      errorGenre.innerHTML = "";
+      errorGenre.removeAttribute("class","alert-danger");
     }
   }
 

@@ -61,7 +61,7 @@ class AdminControllerGoal extends Controller
     {
 
       $goal = Goal::find($id);
-      return view('admin.goals.show')->with('goals',$goal);
+      return view('admin.goals.show')->with('goal',$goal);
     }
 
     /**

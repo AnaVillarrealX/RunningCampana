@@ -37,12 +37,12 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Género (M o F)') }}</label>
+                            <label for="genre" class="col-md-4 col-form-label text-md-right">{{ __('Género (M o F)') }}</label>
 
                             <div class="col-md-6">
-                                <input id="gender" type="text" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}" required autocomplete="gender" autofocus>
-                                <div id="errorGender"></div>
-                                @error('gender')
+                                <input id="genre" type="text" class="form-control @error('genre') is-invalid @enderror" name="genre" value="{{ old('genre') }}" required autocomplete="genre" autofocus>
+                                <div id="errorGenre"></div>
+                                @error('genre')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

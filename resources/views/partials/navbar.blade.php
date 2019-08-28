@@ -58,7 +58,7 @@
                             </div>
                         </li>
                         <li class="">
-                          <a href="" class="pull-sright"><img max_height="20px" style="border-radius:50%" src="{{asset('storage/avatars/'.Auth::user()->avatar)}}"></a>
+                          <a href="" class="pull-right"><img class="avatar" src="{{asset('storage/avatars/'.Auth::user()->avatar)}}"></a>
                         </li>
                     @endguest
                 </ul>

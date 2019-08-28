@@ -14,8 +14,8 @@ class AdminControllerUser extends Controller
      */
     public function index()
     {
-      $usuarios = User::orderBy('last_name')->get();
-      return view('admin.users.index', compact('usuarios'));
+      $users = User::orderBy('last_name')->get();
+      return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -59,8 +59,9 @@ class AdminControllerUser extends Controller
      */
     public function edit($id)
     {
+      $genres = ['M','F'];
       $user = User::find($id);
-      return view('admin.users.edit',compact('user'));
+      return view('admin.users.edit',compact('user','genres'));
     }
 
     /**
@@ -74,7 +75,7 @@ class AdminControllerUser extends Controller
     {
       $this->validate($request, [
         "first_name" => 'required',
-        "last_name" => 'required',
+        "genre" => 'required',
         "avatar" => 'image|dimensions:min_width=580,max_width=610,min_height=390,max_height=410'
       ]);
 
@@ -82,18 +83,18 @@ class AdminControllerUser extends Controller
       $user = User::find($id);
 
       $user->first_name = $request->input("first_name");
-      $user->last_name = $request->input("last_name");
+      $user->genre = $request->input("genre");
 
       $path = $request->file('avatar');
 
-       if (!is_null($path)){
-           $path->storeAs('public/storage', 'avatar'.$request->user()->id);
-           $user->avatar = 'storage/avatars'.$request->user()->id;
+      if (!is_null($path)){
+         $path->storeAs('public/storage', 'avatar'.$request->user()->id);
+         $user->avatar = 'storage/avatars/'.$request->user()->id;
       }
 
       $user->save();
 
-      return redirect()->route('admin.users.show',['id' => $id]);
+      return redirect()->route('users.index');
     }
 
 
@@ -103,11 +104,12 @@ class AdminControllerUser extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($user)
     {
-      $user = User::find($id);
-      $user->delete();
+      $user = User::find($user);
 
-      return redirect()->route("admin.users.index");
+      $deleted = $user->delete();
+
+      return redirect()->route("users.index")->with('notice', 'El usuario ha sido eliminado correctamente.');
     }
 }
