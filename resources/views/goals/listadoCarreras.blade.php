@@ -4,7 +4,7 @@
     <h1>Proximos desafíos</h1>
     <br>
     <div class="container">
-      <div class="row">
+      <div class="carrete">
       <section class="col-xl-6 col-md-6 col-sm-6">
       </div>
        <img class="foto" src="img/fotosFlyers/flyer carrera1.jpg" width="500px">

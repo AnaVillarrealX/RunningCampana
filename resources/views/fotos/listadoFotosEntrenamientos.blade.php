@@ -1,4 +1,7 @@
 @extends('layouts.main')
+
+<link rel="stylesheet" href="{{ asset('css/secciones.css') }}">
+
 @section('contenido')
   <div class="carrete">
     <h1> Nuestra galería de imágenes de entrenamientos </h1>
