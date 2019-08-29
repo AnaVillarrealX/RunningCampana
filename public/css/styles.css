@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
+    font-family: heebo;
 }
 
 body {
@@ -57,12 +58,11 @@ body {
   font-weight: bolder;
 }
 
-h1 {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #5831AF;
-  color: white;
+p {
+  margin-top: 5px;
+  padding: 5px;
   text-align: center;
+  font-weight: bolder;
 }
 
 #dropdownMenu2 {
@@ -87,6 +87,7 @@ h1 {
 .seccion p {
   text-align: justify;
   margin: 10px;
+  color: #BFA5EA;
 }
 
 .imagenSeccion {
@@ -239,4 +240,10 @@ span {
 
 .card {
   background-color: white;
+}
+
+._tamaño{
+  height: 10rem;
+  padding-top: 5px;
+
 }

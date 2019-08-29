@@ -2,13 +2,17 @@
 @section('contenido')
 
 <main>
-  <h1 class="presentacion">Administración de <strong>Carreras</strong></h1>
-    <div class="row">
-      <div class="d-flex card col-12">
+    <div class="container">
+      <section class="row">
+        <div class="col-sm-6">
+          <h2>Administración de <strong>Carreras</strong></h2>
+        </div>
+      </section>
+      <div class="row">
         <article class="col-sm-6">
-          <a href="{{route('goals.create')}}" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Agregar</span></a>
+          <a href="{{route('goals.create')}}" class="btn btn-info"><i class="material-icons">&#xE147;</i> <span>Agregar</span></a>
         </article>
-        <table class="table" >
+        <table class="table table-striped table-hover  w-100" >
             <thead>
                 <tr>
                     <th scope="col">Id</th>
@@ -43,8 +47,11 @@
                             <a href="{{route('goals.edit', ['id' => $goal->id])}}"><i class="far fa-edit"></i></a>
                         </td>
                         <td scope="row">
-
-                            <a href="#"><i class="far fa-trash-alt"></i></a>
+                          <form id='{{$goal->id}}' class='form-delete' action="{{route('goals.destroy',['id' => $goal->id])}}" method="post">
+                            @method('DELETE')
+                            @csrf
+                            <button id='delete-link-{{$goal->id}}' href="#" class="delete"><i class="far fa-trash-alt"></i></button>
+                          </form>
                         </td>
                         <td>{{$goal->updated_at}}</td>
                         </tr>
@@ -56,6 +63,7 @@
         </div> --}}
       </div>
     </div>
+    <script src="{{asset('js/indexusersgoals.js')}}"></script>
   </main>
 
 @endsection

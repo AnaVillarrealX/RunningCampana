@@ -1,39 +1,35 @@
 @extends('layouts.main')
 @section('contenido')
-
-<main>
-    <h1 class="presentacion">Listado carreras</h1>
-    <div class="row">
-      <div class="d-flex card col-12">
-        <table class="table" >
-            <thead>
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Fecha</th>
-                </tr>
-            </thead>
-            <tbody>
-                    @foreach ($carreras as $carrera)
-                    <tr>
-                      <td>
-                          {{$carrera->id}}
-                      </td>
-                      <td>
-                          {{$carrera->title}}
-                      </td>
-                      <td>
-                          {{$carrera->goal_date}}
-                      </td>
-                    </tr>
-                    @endforeach
-            </tbody>
-        </table>
-        {{-- <div>
-            {{$usuarios->links()}}
-        </div> --}}
+  <div class="carrete">
+    <h1>Proximos desafíos</h1>
+    <br>
+    <div class="container">
+      <div class="row">
+      <section class="col-xl-6 col-md-6 col-sm-6">
       </div>
-    </div>
-  </main>
-
+       <img class="foto" src="img/fotosFlyers/flyer carrera1.jpg" width="500px">
+       <br>
+       <br>
+       <img class="foto" src="img/fotosFlyers/flyercarrera2.jpg" width="500px"/>
+       <br>
+       <br>
+       <img class="foto" src="img/fotosFlyers/flyercarrera3.jpg" width="500px"/>
+       <br>
+       <br>
+       <img class="foto" src="img/fotosFlyers/flyercarrera4.jpg" width="500px"/>
+       <br>
+       <br>
+       <img class="foto" src="img/fotosFlyers/flyercarrera5.jpg" width="500px"/>
+       <br>
+       <br>
+       <img class="foto" src="img/fotosFlyers/flyercarrera6.jpg" width="500px"/>
+       <br>
+       <br>
+       <img class="foto" src="img/fotosFlyers/flyercarrera7.jpg" width="500px"/>
+       <br>
+       </div>
+     </section>
+  </div>
+  <script src="js/script.js"></script>
+</main>
 @endsection

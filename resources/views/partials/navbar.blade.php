@@ -1,7 +1,7 @@
 <body>
   <header class="encabezado">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-s">
-        <div class="container">
+        <div class="container-fluid">
             {{-- <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'Runners Campana') }}
             </a>
@@ -10,6 +10,7 @@
             </button> --}}
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <img class="d-block rounded-circle _tamaño"  src="{{asset('img/logo_rc.png')}}" alt="">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item">

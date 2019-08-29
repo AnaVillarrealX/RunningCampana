@@ -10,11 +10,11 @@
                      <article class="card-body p-2 pl-4">
                          <dl class="item-property">
                              <dt>Carrera</dt>
-                             <dd><input type="text" class='form-control' name="description" id="description" value="{{$goal->goal_date}}"></dd>
+                             <dd><input type="text" class='form-control' name="title" id="description" value="{{$goal->title}}"></dd>
                          </dl>
                          <dl class="param param-feature">
                              <dt>Fecha</dt>
-                             <dd><input type="date" class='form-control' name="description" id="date" value="{{$goal->goal_date}}"></dd>
+                             <dd><input type="date" class='form-control' name="goal_date" id="date" value="{{$goal->goal_date}}"></dd>
                          </dl>
                          <div class='container-fluid p-0'>
                              <a href="{{route('goals.index')}}" class="btn btn-info btn-md">Volver</a>

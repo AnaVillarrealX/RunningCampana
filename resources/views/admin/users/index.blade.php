@@ -2,7 +2,7 @@
 @extends('layouts.main')
 
 @section('contenido')
-<div class="container-fluid p-0">
+<div class="container">
 	<section class="table-wrapper m-0">
 		<article class="table-title">
 			<section class="row">
@@ -41,5 +41,6 @@
 			</tbody>
 		</table>
 	</section>
+{{-- <script src="{{asset('js/indexusersgoals.js')}}"></script> --}}
 </div>
 @endsection

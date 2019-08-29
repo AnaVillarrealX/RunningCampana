@@ -107,10 +107,10 @@ class AdminControllerGoal extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($goal)
     {
 
-      $goal = Goal::find($id);
+      $goal = Goal::find($goal);
       $goal->delete();
 
       return redirect()->route("goals.index");
