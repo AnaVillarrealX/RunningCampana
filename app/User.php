@@ -49,7 +49,7 @@ class User extends Authenticatable
 
     public function delete()
     {
-      if ($this->id == self::ROLE_ADMIN) {
+      if ($this->role == self::ROLE_ADMIN) {
         return false;
       }
 
