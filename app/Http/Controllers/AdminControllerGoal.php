@@ -91,14 +91,15 @@ class AdminControllerGoal extends Controller
         "goal_date"  => 'required|date',
     ]);
 
-      $goal = Goal::find($id)([
-      $goal->title = $request->input("title"),
-      $goal->goal_date = $request->input("goal_date"),
-        ]);
+      $goal = Goal::find($id);
+
+      $goal->title = $request->input("title");
+      $goal->goal_date = $request->input("goal_date");
+
 
       $goal->save();
 
-      return redirect()->route('goals.show',['id' => $goal->id]);
+      return redirect()->route('goals.index',['id' => $goal->id]);
     }
 
     /**
