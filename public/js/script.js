@@ -131,6 +131,7 @@ var fotosArrayCarreras = [
       nuevaFoto.setAttribute('src','/img/fotosCarreras/'+fotosArrayCarreras[indice][0]+'.jpg');
       nuevaFoto.setAttribute('width','400px');
       nuevaFoto.setAttribute('heigth','200px');
+      nuevaFoto.setAttribute('position','relative');
       var nuevoEpigrafe = document.createElement('p');
       var nuevoTexto = document.createTextNode(fotosArrayCarreras[indice][1]);
       nuevoEpigrafe.append(nuevoTexto);
@@ -151,6 +152,7 @@ var fotosArrayCarreras = [
       nuevaFoto.setAttribute('src','/img/fotosCarreras/'+fotosArrayCarreras[indice][0]+'.jpg');
       nuevaFoto.setAttribute('width','400px');
       nuevaFoto.setAttribute('heigth','200px');
+      nuevaFoto.setAttribute('position','relative');
       var nuevoEpigrafe = document.createElement('p');
       var nuevoTexto = document.createTextNode(fotosArrayCarreras[indice][1]);
       nuevoEpigrafe.append(nuevoTexto);
