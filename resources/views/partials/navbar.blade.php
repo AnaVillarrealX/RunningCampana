@@ -10,7 +10,7 @@
             </button> --}}
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <img class="d-block rounded-circle _tamaño"  src="{{asset('img/logo_rc.png')}}" alt="">
+              <img class="d-block rounded-circle _tamaño"  src="{{asset('img/logo_runners.jpg')}}" alt="">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item">

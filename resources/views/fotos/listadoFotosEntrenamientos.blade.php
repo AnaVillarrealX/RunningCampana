@@ -7,7 +7,7 @@
     <h1> Nuestra galería de imágenes de entrenamientos </h1>
     <br>
     <div class="container">
-      <button class="btn-primary listadoFotos" style="display:block">+fotos</button>
+      <button class="btn-primary listadoFotos">+fotos</button>
       <br>
        <img class="foto" src="img/fotosEntrenamientos/Entrenamiento_01.jpg" width="500px"/>
        <br>
